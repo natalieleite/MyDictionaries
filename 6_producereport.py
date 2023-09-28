@@ -207,3 +207,11 @@ ProduceDictionary={
     }
 }
 
+for i in ProduceDictionary:
+        if ProduceDictionary[i]['cost'] * ProduceDictionary[i]['amt_sold'] != ProduceDictionary[i]['total']:
+             accurate_total = ProduceDictionary[i]['cost'] * ProduceDictionary[i]['amt_sold'] 
+             print(f'produce name: {i}')
+             print(f'Calculated total: ${accurate_total:.2f}')
+             print(f'Stated Total: ${ProduceDictionary[i]["total"]:.2f}')
+        else:
+            print('right')
